@@ -22,7 +22,6 @@ class Demo1 extends Component {
           // contentWidth='1200px' // 组件的宽
           stretchEnd={true} // 最后一列拉伸
           // rightWidth={}
-
         >
           <Content>
             xxxxxx0
