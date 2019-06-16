@@ -8,6 +8,8 @@
 import React, { Component } from 'react';
 
 import AcDragWidthLayout from '../../src/index';
+// import AcDragWidthLayout from 'ac-drag-width-layout';
+// import 'ac-drag-width-layout/dist/index.css';
 
 
 const { Content, } = AcDragWidthLayout;
@@ -22,7 +24,6 @@ class Demo1 extends Component {
           contentHeight='500px'
           // contentWidth='1200px' // 组件的宽
           stretchEnd={true} // 最后一列拉伸
-          // rightWidth={}
         >
           <Content>
             xxxxxx0
