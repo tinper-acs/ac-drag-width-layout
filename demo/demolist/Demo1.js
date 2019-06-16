@@ -1,11 +1,12 @@
 /**
  *
- * @title 拖动宽
+ * @title 拖动列宽
  * @description 拖动改变列宽
  *
  */
 
 import React, { Component } from 'react';
+
 import DragWidthLayout from '../../src/index';
 
 const { Content, } = DragWidthLayout;
