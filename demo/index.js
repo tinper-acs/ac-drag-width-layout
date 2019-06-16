@@ -11,7 +11,7 @@ import Demo1 from './demolist/Demo1';
 
 var DemoArray = [{
   'example': <Demo1/>,
-  'title': ' 应用组件名称',
+  'title': ' 拖动列宽',
   'code': '/**\n' +
     ' *\n' +
     ' * @title 拖动列宽\n' +
@@ -59,7 +59,7 @@ var DemoArray = [{
     '}\n' +
     '\n' +
     'export default Demo1;\n',
-  'desc': ' 应用组件描述'
+  'desc': ' 拖动改变列宽'
 }];
 
 

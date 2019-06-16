@@ -7,15 +7,16 @@
 
 import React, { Component } from 'react';
 
-import DragWidthLayout from '../../src/index';
+import AcDragWidthLayout from '../../src/index';
 
-const { Content, } = DragWidthLayout;
+
+const { Content, } = AcDragWidthLayout;
 
 class Demo1 extends Component {
   render() {
     return (
       <div className="demoPadding">
-        <DragWidthLayout
+        <AcDragWidthLayout
 
           // widthList={['200px', '200px', '200px', '200px']} // 每一个元素的宽
           contentHeight='500px'
@@ -37,7 +38,7 @@ class Demo1 extends Component {
             xxxxxx3
           </Content>
 
-        </DragWidthLayout>
+        </AcDragWidthLayout>
       </div>
     );
   }

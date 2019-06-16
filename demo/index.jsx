@@ -12,53 +12,7 @@ import Demo1 from './demolist/Demo1';
 var DemoArray = [{
   'example': <Demo1/>,
   'title': ' 拖动列宽',
-  'code': '/**\n' +
-    ' *\n' +
-    ' * @title 拖动列宽\n' +
-    ' * @description 拖动改变列宽\n' +
-    ' *\n' +
-    ' */\n' +
-    '\n' +
-    'import React, { Component } from \'react\';\n' +
-    '\n' +
-    'import AcDragWidthLayout from \'ac-drag-width-layout\';\n' +
-    'import \'ac-drag-width-layout/dist/index.css\';\n' +
-    '\n' +
-    'const { Content, } = DragWidthLayout;\n' +
-    '\n' +
-    'class Demo1 extends Component {\n' +
-    '  render() {\n' +
-    '    return (\n' +
-    '      <div className="demoPadding">\n' +
-    '        <DragWidthLayout\n' +
-    '\n' +
-    '          // widthList={[\'200px\', \'200px\', \'200px\', \'200px\']} // 每一个元素的宽\n' +
-    '          contentHeight=\'500px\'\n' +
-    '          // contentWidth=\'1200px\' // 组件的宽\n' +
-    '          stretchEnd={true} // 最后一列拉伸\n' +
-    '          // rightWidth={}\n' +
-    '        >\n' +
-    '          <Content>\n' +
-    '            xxxxxx0\n' +
-    '          </Content>\n' +
-    '          <Content>\n' +
-    '            xxxxxx1\n' +
-    '          </Content>\n' +
-    '          <Content>\n' +
-    '            xxxxxx2\n' +
-    '          </Content>\n' +
-    '\n' +
-    '          <Content>\n' +
-    '            xxxxxx3\n' +
-    '          </Content>\n' +
-    '\n' +
-    '        </DragWidthLayout>\n' +
-    '      </div>\n' +
-    '    );\n' +
-    '  }\n' +
-    '}\n' +
-    '\n' +
-    'export default Demo1;\n',
+  'code': '/**\n *\n * @title 拖动列宽\n * @description 拖动改变列宽\n *\n */\n\nimport React, { Component } from \'react\';\n\nimport DragWidthLayout from \'../../src/index\';\n\nconst { Content, } = DragWidthLayout;\n\nclass Demo1 extends Component {\n  render() {\n    return (\n      <div className="demoPadding">\n        <DragWidthLayout\n\n          // widthList={[\'200px\', \'200px\', \'200px\', \'200px\']} // 每一个元素的宽\n          contentHeight=\'500px\'\n          // contentWidth=\'1200px\' // 组件的宽\n          stretchEnd={true} // 最后一列拉伸\n          // rightWidth={}\n        >\n          <Content>\n            xxxxxx0\n          </Content>\n          <Content>\n            xxxxxx1\n          </Content>\n          <Content>\n            xxxxxx2\n          </Content>\n\n          <Content>\n            xxxxxx3\n          </Content>\n\n        </DragWidthLayout>\n      </div>\n    );\n  }\n}\n\n\n',
   'desc': ' 拖动改变列宽'
 }];
 
