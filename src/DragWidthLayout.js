@@ -35,7 +35,7 @@ class DragWidthLayout extends Component {
       const resizeWidth = widthList.length * 5;
       // 获取组件的宽
       const componeParent = ReactDOM.findDOMNode(this);
-      widthList[widthList.length - 1] = componeParent.offsetWidth - otherChildrenWidth - resizeWidth;
+      widthList[widthList.length - 1] = componeParent.offsetWidth - parseInt(otherChildrenWidth) - resizeWidth + 'px';
 
     }
 
@@ -43,6 +43,8 @@ class DragWidthLayout extends Component {
     this.setState({
       widthList,
     });
+
+
   }
 
   widthList = [];
@@ -140,6 +142,7 @@ class DragWidthLayout extends Component {
     const _this = this;
     let { children, contentHeight = '100%', contentWidth = '100%' } = _this.props;
     const { resizeLeft, widthList } = _this.state;
+
 
     return (
       <div

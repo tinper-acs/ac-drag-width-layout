@@ -31,13 +31,6 @@ class Demo1 extends Component {
           <Content>
             xxxxxx1
           </Content>
-          <Content>
-            xxxxxx2
-          </Content>
-
-          <Content>
-            xxxxxx3
-          </Content>
 
         </AcDragWidthLayout>
       </div>
