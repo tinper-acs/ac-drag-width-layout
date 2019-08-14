@@ -53,6 +53,8 @@ class DragWidthLayout extends Component {
   onMouseDownLine = (index, e) => {
     const { widthList } = this.state;
 
+    let { allowDragEnd = false } = this.props;
+
 
     const _this = this;
     e = e || window.event;
@@ -104,7 +106,7 @@ class DragWidthLayout extends Component {
       }
 
       // 最后一个 往右拖动
-      if (moveLen > 0 && Number.isNaN(rightWidth)) {
+      if (moveLen > 0 && Number.isNaN(rightWidth) && allowDragEnd) {
         const maxWidth = parentNodeWidth - currentOffsetLeft;
         let tempWidth = leftWidth + moveLen;
 
@@ -115,7 +117,7 @@ class DragWidthLayout extends Component {
       }
 
       // 最后一个 往左拖动
-      if (moveLen < 0 && Number.isNaN(rightWidth)) {
+      if (moveLen < 0 && Number.isNaN(rightWidth) && allowDragEnd) {
         if (leftWidth <= -moveLen) {
           moveLen = (-leftWidth + 10);
         }
@@ -140,8 +142,12 @@ class DragWidthLayout extends Component {
 
   render() {
     const _this = this;
-    let { children, contentHeight = '100%', contentWidth = '100%' } = _this.props;
+    let { children, contentHeight, contentWidth = '100%' } = _this.props;
     const { resizeLeft, widthList } = _this.state;
+
+    if (!contentHeight) {
+      contentHeight = getHeight();
+    }
 
 
     return (

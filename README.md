@@ -23,6 +23,7 @@ import 'ac-drag-width-layout/dist/index.css';
 |contentWidth|组件的宽|string|-|
 |widthList|子组件的框|array|['200px',..]|
 |stretchEnd|最后一列是否自适应|boolen|false|
+|allowDragEnd|最后一列是否可以拖动|boolen|false|
 
 
 

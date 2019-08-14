@@ -21,9 +21,10 @@ class Demo1 extends Component {
         <AcDragWidthLayout
 
           // widthList={['200px', '200px', '200px', '200px']} // 每一个元素的宽
-          contentHeight='500px'
+          // contentHeight='500px'
           // contentWidth='1200px' // 组件的宽
           stretchEnd={true} // 最后一列拉伸
+          allowDragEnd={false} // 最后一列拉伸
         >
           <Content>
             xxxxxx0
