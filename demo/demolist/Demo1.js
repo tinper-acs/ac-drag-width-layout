@@ -7,42 +7,48 @@
 
 import React, { Component } from 'react';
 
+import {
+  Icon, Label, FormControl, Form,
+} from 'tinper-bee';
 import AcDragWidthLayout from '../../src/index';
+
 // import AcDragWidthLayout from 'ac-drag-width-layout';
 // import 'ac-drag-width-layout/dist/index.css';
 
-
-const { Content, } = AcDragWidthLayout;
+const { Content } = AcDragWidthLayout;
+const { FormItem } = Form;
 
 class Demo1 extends Component {
   render() {
+    const { getFieldProps } = this.props.form;
+
     return (
       <div className="demoPadding">
         <AcDragWidthLayout
-
-          // widthList={['200px', '200px', '200px', '200px']} // 每一个元素的宽
-          // contentHeight='500px'
-          // contentWidth='1200px' // 组件的宽
-          stretchEnd={true} // 最后一列拉伸
-          allowDragEnd={false} // 最后一列拉伸
+          minWidth={200} // 最小宽
+          contentHeight={200} // 容器的高
         >
+          {/* 左边内容 */}
           <Content>
-            xxxxxx0
+            <FormItem>
+              <FormControl
+                placeholder="请输入姓名"
+                {...getFieldProps('name', {
+                  validateTrigger: 'onBlur',
+                })}
+              />
+            </FormItem>
+
           </Content>
+
+          {/* 右边内容 */}
           <Content>
             xxxxxx1
           </Content>
-          <Content>
-            xxxxxx2
-          </Content>
-          <Content>
-            xxxxxx3
-          </Content>
-
         </AcDragWidthLayout>
       </div>
     );
   }
 }
 
-export default Demo1;
+export default Form.createForm()(Demo1);

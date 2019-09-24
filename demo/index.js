@@ -7,60 +7,8 @@ import Clipboard from 'bee-clipboard';
 import './demo.scss';
 
 
-import Demo1 from './demolist/Demo1';
-
-var DemoArray = [{
-  'example': <Demo1/>,
-  'title': ' 拖动列宽',
-  'code': '/**\n' +
-    ' *\n' +
-    ' * @title 拖动列宽\n' +
-    ' * @description 拖动改变列宽\n' +
-    ' *\n' +
-    ' */\n' +
-    '\n' +
-    'import React, { Component } from \'react\';\n' +
-    '\n' +
-    'import AcDragWidthLayout from \'ac-drag-width-layout\';\n' +
-    'import \'ac-drag-width-layout/dist/index.css\';\n' +
-    '\n' +
-    'const { Content, } = DragWidthLayout;\n' +
-    '\n' +
-    'class Demo1 extends Component {\n' +
-    '  render() {\n' +
-    '    return (\n' +
-    '      <div className="demoPadding">\n' +
-    '        <DragWidthLayout\n' +
-    '\n' +
-    '          // widthList={[\'200px\', \'200px\', \'200px\', \'200px\']} // 每一个元素的宽\n' +
-    '          contentHeight=\'500px\'\n' +
-    '          // contentWidth=\'1200px\' // 组件的宽\n' +
-    '          stretchEnd={true} // 最后一列拉伸\n' +
-    '          // rightWidth={}\n' +
-    '        >\n' +
-    '          <Content>\n' +
-    '            xxxxxx0\n' +
-    '          </Content>\n' +
-    '          <Content>\n' +
-    '            xxxxxx1\n' +
-    '          </Content>\n' +
-    '          <Content>\n' +
-    '            xxxxxx2\n' +
-    '          </Content>\n' +
-    '\n' +
-    '          <Content>\n' +
-    '            xxxxxx3\n' +
-    '          </Content>\n' +
-    '\n' +
-    '        </DragWidthLayout>\n' +
-    '      </div>\n' +
-    '    );\n' +
-    '  }\n' +
-    '}\n' +
-    '\n' +
-    'export default Demo1;\n',
-  'desc': ' 拖动改变列宽'
-}];
+import Demo1 from "./demolist/Demo1";
+var DemoArray = [{"example":<Demo1 />,"title":" 拖动列宽","code":"/**\n *\n * @title 拖动列宽\n * @description 拖动改变列宽\n *\n */\n\nimport React, { Component } from 'react';\n\nimport {\n  Icon, Label, FormControl, Form,\n} from 'tinper-bee';\nimport AcDragWidthLayout from '../../src/index';\n\n// import AcDragWidthLayout from 'ac-drag-width-layout';\n// import 'ac-drag-width-layout/dist/index.css';\n\nconst { Content } = AcDragWidthLayout;\nconst { FormItem } = Form;\n\nclass Demo1 extends Component {\n  render() {\n    const { getFieldProps } = this.props.form;\n\n    return (\n      <div className=\"demoPadding\">\n        <AcDragWidthLayout\n          minWidth={200} // 最小宽\n          contentHeight={200} // 容器的高\n        >\n          {/* 左边内容 */}\n          <Content>\n            <FormItem>\n              <FormControl\n                placeholder=\"请输入姓名\"\n                {...getFieldProps('name', {\n                  validateTrigger: 'onBlur',\n                })}\n              />\n            </FormItem>\n\n          </Content>\n\n          {/* 右边内容 */}\n          <Content>\n            xxxxxx1\n          </Content>\n        </AcDragWidthLayout>\n      </div>\n    );\n  }\n}\n\n\n","desc":" 拖动改变列宽"}]
 
 
 class Demo extends Component {
